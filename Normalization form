@@ -1,0 +1,22 @@
+AAPLY NORMALIZATION
+
+	1. First normal form
+	This design violates second normal form, because Product Name is dependent on Product ID, but not on Order ID, so it is not dependent on the entire primary key. You must remove Product Name from the table. It belongs in a different table (Products).
+Summary: Each cell(Row ) should holds only one value   (Not a list of value)
+
+	2. Second normal form
+Second normal form requires that each non-key column be fully dependent on the entire primary key, not on just part of the key. This rule applies when you have a primary key that consists of more than one column. For example, suppose you have a table containing the following columns, where Order ID and Product ID form the primary key:
+
+Order ID (primary key)
+
+Product ID (primary key)
+
+Product Name
+
+This design violates second normal form, because Product Name is dependent on Product ID, but not on Order ID, so it is not dependent on the entire primary key. You must remove Product Name from the table. It belongs in a different table (Products).
+
+Summary : With composite key on the table, Non key column should be dependent on all the primary keys
+
+
+	3. Third normal form
+Third normal form requires that not only every non-key column be dependent on the entire primary key, but that non-key columns be independent of each other.
